@@ -81,7 +81,7 @@ class DemandeApiTest extends TestCase
             ->assertJsonValidationErrors('motif');
 
         $this->patchJson("/api/demandes/$id/statut", ['statut' => 'rejetee', 'motif' => 'Pièces manquantes'])
-            ->assertOk()->assertJsonPath('data.motif_rejet', 'Pièces manquantes');
+            ->assertOk()->assertJsonPath('data.motif_rejet', 'Pieces manquantes');
     }
 
     public function test_un_statut_final_ne_peut_plus_changer(): void
