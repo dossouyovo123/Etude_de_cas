@@ -80,7 +80,7 @@ class DemandeApiTest extends TestCase
             ->assertUnprocessable()
             ->assertJsonValidationErrors('motif');
 
-        $this->patchJson("/api/demandes/$id/statut", ['statut' => 'rejetee', 'motif' => 'Pièces manquantes'])
+        $this->patchJson("/api/demandes/$id/statut", ['statut' => 'rejetee', 'motif' => 'Pieces manquantes'])
             ->assertOk()->assertJsonPath('data.motif_rejet', 'Pieces manquantes');
     }
 
