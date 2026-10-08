@@ -82,7 +82,7 @@ Invoke-RestMethod -Method Patch -Uri http://127.0.0.1:8000/api/demandes/1/statut
 Rejet (motif obligatoire) :
 
 ```powershell
-Invoke-RestMethod -Method Patch -Uri http://127.0.0.1:8000/api/demandes/1/statut -Headers $h -ContentType "application/json" -Body '{"statut":"rejetee","motif":"Pièces manquantes"}'
+Invoke-RestMethod -Method Patch -Uri http://127.0.0.1:8000/api/demandes/1/statut -Headers $h -ContentType "application/json" -Body '{"statut":"rejetee","motif":"Pieces manquantes"}'
 ```
 
 ### Exemple : consulter les demandes d'un usager
